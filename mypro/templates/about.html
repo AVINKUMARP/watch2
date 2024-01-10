@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AKWATCH</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/index.css">
+  </head>
+  <body>
+
+
+    <div class="container-fluid b">
+      <div class="head-nav">
+        <marquee class="Announcement_bar" direction="right">FREE SHIPPING & RETURNS</marquee>
+      </div>
+    <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid ">
+        <a class="navbar-brand nav1 text-light " href="{% url 'index' %}">AK WATCH</a>
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav  my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link text-light" aria-current="page" href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Account
+              </a>
+              <ul class="dropdown-menu bg-dark">
+                <li><a class="dropdown-item text-light" href="{% url 'login' %}">login</i></a></li>
+                <li><hr class="dropdown-divider text-light"></li>
+                <li><a class="dropdown-item text-light " href="{% url 'signup' %}">signup</i></a></li>
+                <li><hr class="dropdown-divider text-light"></li>
+                <li><a class="dropdown-item text-light" href="{% url 'support' %}">support</a></li>
+                
+              </ul>
+            </li>
+            <li class="nav-item">
+           
+            </li>
+          </ul>
+          <form class="d-flex ms-auto me-3" role="search">
+            <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
+          <i class="fa-solid fa-cart-shopping text-light my-2  me-2 fs-4"></i>
+        </div>
+      </div>
+    </nav>
+  </div>
+  </div>
+</div>
+    <!-- Navbar -->    
+
+  <div class="container m-auto my-4">
+      <h1 class="mb-2 fw-bold fs-1 py-3">
+      About Us
+      </h1>
+      <h2 class="fs-3 fw-bold py-3">The Idea</h2>
+      <div class="row">
+        <div class="col-lg-6">      <p class="fs-5 text-justify">The idea for The Watch Pages came about because people were often asking us for advice about which watch they should buy. The more this happened — and it happened a lot — the more we realized that searching for a watch online is a minefield of information. Leveraging our 20 years of experience working in the watch industry, we understood the intricacies and nuances that come with selecting the perfect watch.</p></div>
+        <div class="col-lg-6"> <p class="fs-5 text-justify">The individual brand websites are great, but there are hundreds of watch brands in Switzerland alone, so checking out each page individually would take you weeks, and that’s if you know the names of all the brands.The individual brand websites are great, but there are hundreds of watch brands in Switzerland alone, so checking out each page individually would take you weeks, and that’s if you know the names of all the brands.</p></div>
+        <div class="col-lg-6"><p class="fs-5 text-justify">Recognizing the need for a comprehensive platform, we created a solution. The Watch Pages is not just a website but a pioneering resource where you can effortlessly search for new watches worldwide, compare models, check prices, and discover new brands all in one place.Recognizing the need for a comprehensive platform, we created a solution. The Watch Pages is not just a website but a pioneering resource where you can effortlessly search for new watches worldwide, compare models, check prices, and discover new brands all in one place.</p></div>
+        <div class="col-lg-6">      <p class="fs-5 text-justify">The Watch Pages is also a treasure trove of information, featuring numerous articles designed to inspire and inform. Whether you’re making your first purchase or adding to an existing collection, our articles provide valuable insights to help you make informed decisions.The Watch Pages is also a treasure trove of information, featuring numerous articles designed to inspire and inform. Whether you’re making your first purchase or adding to an existing collection, our articles provide valuable insights to help you make informed decisions.</p></div>
+      </div>
+
+     
+
+
+  </div>
+
+
+
+    <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li><a href="{% url 'mec' %}">MECHANICAL</a></li>
+              <li><a href="{% url 'auto' %}">AUTOMATIC</a></li>
+              <li><a href="{% url 'qur' %}">QUARTZ</a></li>
+              <li><a href="{% url 'cro' %}">CRONOGRAPH</a></li>
+              <li><a href="{% url 'smt' %}">SMART</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/about/">About Us</a></li>
+              <li><a href="http://scanfcode.com/contact/">Support</a></li>
+              <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+ 
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by 
+              AKWATCH.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a class="instagram" href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>

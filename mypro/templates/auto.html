@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AKWATCH</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/index.css">
+  </head>
+  <body>
+
+
+    <div class="container-fluid b">
+      <div class="head-nav">
+        <marquee class="Announcement_bar" direction="right">FREE SHIPPING & RETURNS</marquee>
+      </div>
+    <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid ">
+        <a class="navbar-brand nav1 text-light " href="{% url 'index' %}">AK WATCH</a>
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav  my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link text-light" aria-current="page" href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Account
+              </a>
+              <ul class="dropdown-menu bg-dark">
+                <li><a class="dropdown-item text-light" href="{% url 'login' %}">login</i></a></li>
+                <li><hr class="dropdown-divider text-light"></li>
+                <li><a class="dropdown-item text-light " href="{% url 'signup' %}">signup</i></a></li>
+                <li><hr class="dropdown-divider text-light"></li>
+                <li><a class="dropdown-item text-light" href="{% url 'support' %}">support</a></li>
+                
+              </ul>
+            </li>
+            <li class="nav-item">
+           
+            </li>
+          </ul>
+          <form class="d-flex ms-auto me-3" role="search">
+            <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
+          <i class="fa-solid fa-cart-shopping text-light my-2  me-2 fs-4"></i>
+        </div>
+      </div>
+    </nav>
+  </div>
+  </div>
+</div>
+    <!-- Navbar -->    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 my-4">
+                <h1 class="fs-1 ">AUTOMATIC</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">   
+       
+          {% for i in result %}
+            {% if i.brand == "Titan Auto" %}
+            <div class="col-lg-3 col-md-3 col-sm-6 card1">
+              <div class="card my-3" style="width: 100%;">
+                <div class="cd1 w-100 text-center">
+                  <img src="{{i.img.url}}" class="card-img-top w-100 pt-5 text-center" alt="...">
+                </div>
+                  <div class="card-body text-center ">
+                    <h5 class="card-title text-truncate" id="name" name="name">{{i.name}}</h5>
+                    <p class="card-text" name="price">{{i.price}}$</p>
+                    <div class=" text-center">
+                    <a href="#" class="btn btn butt px-5">Details</a>
+                    </div>
+                    <a href=""></a>
+                  </div>
+                </div>
+          </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+    </div>
+
+
+
+    <div class="container seo">
+        <h2>Automatic Watches</h2>
+        <p>A variety of mechanisms can be used to power watches. To keep a watch ticking accurately, each of these mechanisms, known as watch movements, employs a different technology.
+        With the introduction of automatic movement, timepieces became lower-maintenance and more user-friendly as watchmaking progressed. Automatic movement, which first appeared in the late 1700s, took a similar approach to power a watch to mechanical movement. The movement of the wearer provides energy to automatic watches.</p>
+        <p>An automatic wristwatch is a good option if you want a timepiece that strikes a good balance between tradition and innovation. Automatic watches require less maintenance than mechanical watches but still rely on the traditional mainspring mechanism to function. The weightiness of an automatic watch distinguishes it, giving it a distinct feel that many watch enthusiasts appreciate.</p>
+        <h2>Manual VS Automatic Watches</h2>
+        <p>The movements of manual and automatic machines are similar. This is because they are both mechanical watches that keep time through the use of mechanical elements. The watch has a mainspring that builds tension and slowly releases it to power the watch. The distinction between the two is in the manner in which they store energy. To create tension in a manual watch, as the name implies, you must manually wind up the crown on the side of the watch.</p>
+        <p>An automatic watch, on the other hand, does it for you via a self-winding power reserve. There is usually some kind of weight or ball bearing within the watch that moves back and forth as you move. The watch absorbs that energy and stores it in the mainspring, which it can then release later to power the watch.</p>
+        <h2>Buy Automatic Watch from Titan</h2>
+        <p>Automatic watches for men are more than just timepieces. They are a way to escalate your everyday wardrobe. At Titan, we bring you a range of men's automatic watches with sophisticated and stylish leather straps. Whether you are looking for a watch to pair with workwear or casuals, there is a watch for every occasion. From subtle brown and black leather straps to cool blue, take your pick and add to your watch collection.</p>
+        <p>There are a few key factors to consider when selecting the best automatic watches for men. As you can see, the various types of watch movements necessitate varying levels of maintenance and upkeep from the wearer of the watch. And automatic watches are the easiest to maintain. So, add a new automatic watch from Titan to your collection today!</p>
+        <h2>Key Components of an Automatic Wrist Watch</h2>
+        <h3>• Mainspring</h3><p>The mainspring is the source of power for automatic watch movements. When an automatic watch's crown is wound, kinetic energy is transferred to the coil mainspring. As more energy is stored, the mainspring tightens, storing even more energy for later use.</p>
+        <h3>• Crown</h3><p>A crown is a small wheel on the side of the watch. The crown is turned, winding the watch and allowing it to run.</p>
+        <h3>• Gear Train</h3><p>The mainspring's stored energy is allowed to pass through the gear train, which is a small series of internal gears that moves the watch hands and other parts of the watch face.</p>
+        <h3>• Escapement</h3><p>The escapement functions as a timepiece's internal braking system. The energy transferred from the mainspring to the gear train is expelled in equal parts, which is referred to as escapement.</p>
+        <h3>• Balance Wheel</h3><p>The balance wheel is an internal component that beats five to ten times per second in a circular motion.</p>
+        <h3>• Dial Train</h3><p>The dial train is a similar series of gears to the gear train. The dial train transfers an equal amount of energy from the balance wheel to the watch hands, allowing them to move.</p>
+        <h3>• Jewels</h3><p>Jewels are synthetic rubies placed in the center of the gear to keep it in motion and prevent heat and friction wear.</p>
+        <h3>• Rotor</h3><p>The rotor is a half-circle-shaped metal weight. The rotor is linked to the movement and can freely swing as the wearer's wrist moves. When the wearer moves, the rotor transfers power to the mainspring and twists it, where the energy is then stored. When the mainspring is completely wound, a clutch connected to the rotor engages. The clutch prevents the rotor from further winding the mainspring.</p>
+        <h2>Factors to Consider While Buying An Automatic Winding Watch</h2>
+        <p>Automatic watches are outstanding inventions that have withstood the test of time. Many important metrics are used to measure the quality of the timepiece's movements when purchasing an automatic watch. Here are a few:</p>
+        <h3>• Accuracy</h3><p>The level of precision required by an automatic watch will vary depending on the wearer. Some people will require their watches to be extremely precise. Professional divers and military personnel, for example, may require the most accurate watches, known as chronometer watches. On the other hand, a standard automatic watch will be +-25 seconds per day for those who care more about style and convenience.</p>
+        <p>This is a general rule of thumb when it comes to automatic watch accuracy. It means that an automatic watch should gain or lose no more than 25 seconds between two days. If a watch gains or loses more than 25 seconds in two days, something is wrong with it, and it needs to be serviced.</p>
+        <h3>• Power Reserve</h3><p>Fully wound automatic watches can store up to 42 hours of energy before needing to be powered again. Some automatic watch designs can store up to ten days of power reserves.</p>
+        <h3>• Complications</h3><p>Complications are watch functions that do something other than telling time. Many automatic watch designs allow for the display of the calendar date, moon phases, power reserve indicators, and alarm functions.</p>
+        <h3>• Reliability</h3><p>Automatic watches are dependable watch designs that are precise and accurate. Certain features, such as a higher BPH, can improve the timepiece's reliability and accuracy.</p>
+        <h3>• Materials</h3><p>Automatic watches typically have a backglass that allows you to see the movement. Well-made movements keep accurate time, whereas poorly manufactured movements have inconsistently measured ticks. Inadequately made watches can lose minutes in a day. At Titan, we bring together the highest-quality materials for accuracy, precision, and dependability in our automatic watches.</p>
+        <h2>Maintenance and Upkeep of Automatic Watches for Men</h2>
+        <p>The watch movements, also known as calibers, are the driving force behind all time-keeping functions in your watch. These intricate and precise movements are critical to ensuring the accuracy of the timepiece. The timepiece would not function without these internal watch movements. While most watches are purchased for their aesthetics, those with an eye for detail and an appreciation for craftsmanship and precision will appreciate knowing how the watch works on the inside. Your beautiful automatic watch can last a lifetime if properly cared for and serviced. You will have to wind your automatic watch at some point. In general, however, wearing an automatic watch on a regular basis is one of the simplest ways to maintain it. These watches perform best when they are worn on a regular basis. If the watch has stopped working due to wear, gently shake it with the dial facing up until the hands begin to move again. Alternatively, put it on and move your wrist a few times. You can set the date and time once the hands begin to move.</p>
+        <p>Keep the watch dry and clean at all times. Wipe your face with a soft cloth every night, and avoid showering or bathing while wearing the watch. While a watch may be waterproof, it cannot withstand high water temperatures. The mechanism's gaskets can expand and contract, reducing the timepiece's lifespan and accuracy. Even the most well-kept watches suffer from normal wear and tear. Professional servicing is required every three to five years to keep your automatic watch accurate and beautiful.</p>
+        <p>Unlike a car, which depreciates the moment you sign the purchase contract, purchasing a good automatic watch is akin to purchasing a good piece of jewelry. We already know that an automatic watch has no expiration date and can continue to appreciate for many years if properly cared for.</p>
+        <p>The longevity of an automatic watch is one of its most amazing features. Unlike a battery-powered or quartz watch, an automatic watch has an indefinite lifespan with the right craftsmanship, pausing only when the wearer stops winding or moving the internal mechanisms of the timepiece.</p>
+        <h2>FAQs</h2>
+        <h3>1. Are automatic watches expensive?</h3>
+        <p>Not all automatic watches are exorbitantly priced. Automatic watches for men come in a variety of price ranges. They continue to be popular because they are cutting-edge watchmaking machines. You can check out men's automatic watches at Titan to get the best prices.</p>
+        <h3>2. What is the cancellation policy at Titan?</h3>
+        <p>You can apply for a cancellation online only if your shipment is yet to be dispatched.</p>
+        <h3>3. Can we replace our order after we receive the product?</h3>
+        <p>You can contact our customer service and give a valid reason for your replacement. We will then arrange for a pick-up and refund.</p>
+        <h3>4. Do we get any discounts on automatic winding watches by shopping online from Titan?</h3>
+        <p>Yes, you can filter out options to look for discounts on our website and choose from the given products.</p>
+        <h3>5. Where can I buy automatic watch of the best quality?</h3>
+        <p>Because watches are a one-time investment, purchasing a good one can be a difficult decision. Therefore, you must conduct extensive research before making a final decision. You can browse through our website and take a look at the best automatic watches to get reasonably priced and best-quality timepieces.</p>
+        <h3>6. Are automatic watches an ideal gift?</h3>
+        <p>Yes, you can shop for automatic watches from Titan as they make for the perfect gift for men. So be it any occasion; watches are a timeless accessory to gift!</p>
+        <h3>7. Does an automatic watch run on pulse?</h3>
+        <p>Yes, an automatic watch works through the normal motion of the wearer's wrist. A rotor generates the energy used to vibrate the weighted arm, a half-disc metal weight that turns as the component is pushed.</p>
+        <h3>8. How can I track my order?</h3>
+        <p>You can head to our official website and enter your email address and order number to track your order.</p>
+        <h3>9. What are the payment options available at Titan?</h3>
+        <p>Credit cards, debit cards, international cards, net banking, and cash on delivery are all acceptable payment methods.</p>
+        <h3>10. Are there any shipping charges?</h3>
+        <p>There are no shipping or delivery charges when you shop online from Titan.</p>
+        <h3>11. Do automatic watches have to be wound manually?</h3>
+        <p>They do, indeed. Consider the mainspring in a watch. The spring in an automatic watch is completely unwound when you first get it. Moving the watch causes the rotor to spin, which starts the mainspring winding process. While this will start the watch, it will not be enough to fully tighten the mainspring, allowing you to take full advantage of the power reserve.</p>
+        <p>As a result, it is critical to wind the crown about 30-40 times, which is enough to wind the mainspring on most watches completely. When the mainspring is fully wound, and the watch is worn on an active wrist, the rotor will do its job by continuously winding the mainspring and topping off the watch's power reserve.</p>
+        <h3>12. How to wind an automatic watch?</h3>
+        <p>A watch is wound by turning the crown clockwise. Maintain the crown in its pushed-in position and wind it clockwise. If your watch has a screw-down crown, you must first unscrew it before winding it. A winder is another option for keeping your automatic watch fully wound. A watch winder is a device that holds your watch when you are not wearing it.</p>
+        <p>This is especially useful if you have more than one automatic watch or a watch with a high level of complication, such as a perpetual calendar, which is more complicated and takes more time to set.</p>
+        <h3>13. Is it possible to overwound an automatic watch?</h3>
+        <p>No, when the mainspring is fully wound, a mechanism in the movement disengages the winding gears from the mainspring.</p>
+        <h3>14. What causes a malfunction in automatic movements?</h3>
+        <p>Dropping an automatic watch can cause the delicate internal mechanisms to break, resulting in the watch malfunctioning. Frequent use of an automatic watch without regular service maintenance can also cause abnormal wear and tear, preventing the watch from working properly.</p>
+        </div>
+
+
+    <!-- Site footer -->
+    <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h6>About</h6>
+              <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </div>
+  
+            <div class="col-xs-6 col-md-3 col-sm-6">
+              <h6>Categories</h6>
+              <ul class="footer-links">
+                <li><a href="http://scanfcode.com/category/c-language/">MECHANICAL</a></li>
+                <li><a href="http://scanfcode.com/category/front-end-development/">AUTOMATIC</a></li>
+                <li><a href="http://scanfcode.com/category/back-end-development/">QUARTZ</a></li>
+                <li><a href="http://scanfcode.com/category/java-programming-language/">CRONOGRAPH</a></li>
+                <li><a href="http://scanfcode.com/category/android/">SMART</a></li>
+                <li><a href="http://scanfcode.com/category/templates/">DIGITAL</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-xs-6 col-md-3 col-sm-6">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+                <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by 
+                AKWATCH.
+              </p>
+            </div>
+  
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a class="instagram" href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>   
+              </ul>
+            </div>
+          </div>
+        </div>
+  </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+  </html>  

@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AKWATCH</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/index.css">
+  </head>
+  <body>
+
+
+    <div class="container-fluid b">
+      <div class="head-nav">
+        <marquee class="Announcement_bar" direction="right">FREE SHIPPING & RETURNS</marquee>
+      </div>
+    <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid ">
+        <a class="navbar-brand nav1 text-light " href="{% url 'index' %}">AK WATCH</a>
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav  my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link text-light" aria-current="page" href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Account
+              </a>
+              <ul class="dropdown-menu bg-dark">
+                <li><a class="dropdown-item text-light" href="{% url 'login' %}">login</i></a></li>
+                <li><hr class="dropdown-divider text-light"></li>
+                <li><a class="dropdown-item text-light " href="{% url 'signup' %}">signup</i></a></li>
+                <li><hr class="dropdown-divider text-light"></li>
+                <li><a class="dropdown-item text-light" href="{% url 'support' %}">support</a></li>
+                
+              </ul>
+            </li>
+            <li class="nav-item">
+           
+            </li>
+          </ul>
+          <form class="d-flex ms-auto me-3" role="search">
+            <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
+          <i class="fa-solid fa-cart-shopping text-light my-2  me-2 fs-4"></i>
+        </div>
+      </div>
+    </nav>
+  </div>
+  </div>
+</div>
+    <!-- Navbar -->    
+
+    <div class="container">
+      <div class="row">
+          <div class="col-lg-12 my-4">
+              <h1 class="fs-1 ">MECHANICAL</h1>
+          </div>
+      </div>
+  </div>
+
+    <div class="container">
+        <div class="row">
+       
+          {% for i in result %}
+            {% if i.brand == "Titan" %}
+            <div class="col-lg-3 col-md-3 col-sm-6 card1">
+              <div class="card my-3" style="width: 100%;">
+                <div class="cd1 w-100 text-center">
+                  <img src="{{i.img.url}}" class="card-img-top w-100 pt-5 text-center" alt="...">
+                </div>
+                  <div class="card-body text-center">
+                    <h5 class="card-title text-truncate" id="name" name="name">{{i.name}}</h5>
+                    <p class="card-text" name="price">{{i.price}}$</p>
+                    <div class=" text-center">
+                    <a href="#" class="btn btn butt px-5">Details</a>
+                    </div>
+                    <a href=""></a>
+                  </div>
+                </div>
+          </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+    </div>
+
+
+
+
+    <div class="container mb-4">
+      <h2>Mechanical Watches</h2>
+      <h2>History of Mechanical Watches - A Glimpse</h2>
+      <p>Mechanical watches evolved in 17th Century Europe from spring-powered clocks, which came into existence in the 15th Century. Mechanical watches are purchased for their luxury and aesthetic values today. They are held in high esteem in appreciation of their precision and craftsmanship. A mechanical watch uses a clockwork mechanism to measure time, whereas quartz watches function on a small battery.</p>
+      <p>They are primarily mechanical hand wind watches run by a mainspring, which must be wound by hand or with its self-winding mechanism. But even the best mechanical watches, sometimes, do not work accurately. They are required to be cleansed and calibrated by skilled watchmakers. After the 1970's the mechanical watches became a high-end product appreciated as a status symbol, while the quartz watches took over most of the watch market.</p>
+      <h2>Functional and Fashionable Mechanical Watch for Men</h2>
+      <p>There is nothing that can beat the style and precision of Swiss mechanical watches. These watches are considered top-of-the-line products and are genuinely admired by watch collectors or watch enthusiasts. The line of Swiss mechanical watches for men is classy, timeless, and excellent in craftsmanship. These legendary watches are aspirational styling accessories that are identified by certain traits such as – </p>
+      <h5>• The movement of the watch hands must be assembled and thoroughly inspected by the manufacturer in Switzerland.</h5>
+      <h5>• 50% of components of the watch must be Swiss manufactured. </h5>
+      <p>If you are a watch enthusiast, you already know why Swiss mechanical watches with such high-quality standards are such masterpieces. If you enjoy collecting watches, then the Swiss-made mechanical watch for men is a must-have. Browse through our exclusive collection of mechanical watches online and take home your favourite functional and fashionable ones right away.</p>
+      <h2>Opt for Classic Style of Mechanical Watches Online</h2>
+      <p>If you haven't thought of taking a break from the battery-powered, electronic and quartz-mechanism watches already, then go for it now. Instead, choose the classic mechanical watch style that uses a spring mechanism for winding to make the watch function. Once fully wound, a mechanical watch can operate uninterrupted without any batteries for about 30-40 hours. Check out the vast array of mechanical watches online on the Titan website. Take your pick from a wide range of exciting designs.</p>
+      <h2>Explore a Range of Classic Mechanical Watches</h2>
+      <p>Being a top-notch brand, we take great pleasure in offering mechanical watch designs that are not limited by functionality. There's much more. With many of us sporting digital watches these days, it is rare to find mechanical watch lovers. But those who are into collecting mechanical watches stand out of the crowd.</p>
+      <p>From sundials, hourglasses to mechanical watches, humans have found ways to keep track of time. Yet, no such time-tracking device can be compared to the elegance of a mechanical watch that is considered one of the most beautiful creations of humankind. As the most remarkable achievement of human intelligence, mechanical watches, especially Swiss mechanical watches, combine machinery, style, beauty, and craftsmanship. Swiss watches are akin to donning a badge of honour. This is because of the unrivalled quality, technical superiority, and aesthetic appeal of the intricately designed mechanical watches.</p>
+      <h2>Marvel at the Elegance of Ladies Mechanical Watches</h2>
+      <p>Men are often known to lead the game when it comes to collecting watches, especially of such luxury value. But if you believe that they are only meant for men, you need to think again. Be it the Inspire with Rosegold Dial watch, Inspire with Prune Dial, or Animalia, the range of ladies mechanical watches prove that there is a watch for everyone. So, if you are on the lookout for an ideal timepiece, be it a man or a woman, then look no further. Browse through Titan's expansive collection of exquisitely embellished mechanical watches in-store or online.</p>
+      <h2>Choosing Mechanical Watches with Suitable Strap Material</h2>
+      <p>While mechanical watches for men and women are standalone beauties, the watch strap is mainly responsible for how beautifully fleshed out the dial appears. When it comes to the strap material, everyone has their preferences. While exploring a range of mechanical watches online, it is imperative to choose the strap material meticulously. Here are a few different types of strap materials:</p>
+      <h3>• Genuine Leather</h3><p>If you seek a premium look for your mechanical watch, the genuine leather strap is what you must opt for.</p>
+      <h3>• Metal</h3><p>Elegant and stylish, the metal straps elevate the look of your dials.</p>
+      <h3>• Synthetic Leather</h3> <p>Mechanical watches look quite a dealmaker with beautiful synthetic leather straps.</p>
+      <h3>• Polyurethane</h3> <p>A polyurethane strap prolongs the longevity and durability of your sleek and slender watch.</p>
+      <h3>• Silicone</h3><p>The strength and durability of the silicone-based mechanical watch strap make it quite irresistible.</p>
+      <p>The colour of the strap is a critical aspect. Vibrant colours such as silver, brown, gold, rose gold, black, and more facilitate making a style statement. Additionally, with a range of dial colours to choose from, you will be spoilt for a variety of choices while buying mechanical watches online.</p>
+      <h2>Emotional Aspects of Buying Mechanical Watches in India</h2>
+      <p>Love has the power to make rationality recede into the background. So does a mechanical watch. Choosing a mechanical watch is a matter of emotion. It needs no rationality. A glance at the technological aspect of a mechanical watch explains why men are so fascinated with it. Of course, it has to do with its heritage value, but it also has a lot to do with the emotions people associate with mechanical watches. The impressive interaction of over 100 miniature individual pieces makes an analogue mechanical watch a masterpiece of exemplary craftsmanship.</p>
+      <h2>Buy Mechanical Watches Online</h2>
+      <p>Be it an interview, or a posh evening party, donning a Swiss mechanical watch can indeed make an impression. While men can sport the timepiece with trendy solid-coloured suits, women can pair it up with long off-shoulder dresses and pencil heels to complete their outfits. Women can also make a power statement by wearing Swiss-style mechanical watches to work. Since Swiss mechanical watches are all about tradition and heritage, make sure you get one of these legendary timepieces your own soon.</p>
+      <p>Irrespective of your gender, you can coordinate watches well with ties, wallets, or other accessories. If you want to buy mechanical watches, India, visit the Titan website for an exclusive collection for both men and women. </p>
+      <h2>FAQs</h2>
+      <h3>1. How accurate is a mechanical watch?</h3>
+      <p>Easily influenced by environmental conditions, a mechanical watch is as accurate as the environment's stability. Depending on the temperature, the position of the watch, movements of your arm, or the amount the spring is wound, the accuracy of the mechanical watch changes.</p>
+      <h3>2. What are the factors influencing accuracy majorly?</h3>
+      <p>As the mainspring is wound and small metal parts work in tandem, power is generated, making a mechanical watch work. But the fragility of those small metal parts makes them susceptible to environmental conditions such as gravity, shock, and temperature. Additionally, movements of your arms, regular usage time, and the winding state of the mainspring influence the watch's accuracy. </p>
+      <h3>3. How can I improve the accuracy of my watch?</h3>
+      <p>If you want to keep your mechanical watch working accurately, you must keep winding the mainspring every single day, at a fixed time, even if the watch has a self-winding mechanism.</p>
+      <h3>4. How do I keep my watch running for a lifetime?</h3>
+      <p>Besides winding the watch, if its tiny metal components are kept well-lubricated, free from dirt, moisture, or dirt, a mechanical watch will last for generations. It is quite normal to experience wear and tear due to everyday usage. Hence, it is recommended that you get them serviced every 3-5 years.</p>
+      <h3>5. If quartz watches are cheaper and more accurate, why should I opt for a mechanical watch?</h3>
+      <p>Yes, quartz watches are cheaper and more accurate at any time, but mechanical watches are not about achieving accuracy. They are about aesthetics, craftsmanship and tradition. The allure of mechanical watches lies in their emotional value.</p>
+      <h3>6. For how long can a mechanical watch continuously work?</h3>
+      <p>As is the case with most mechanical watch brands, they operate anywhere between 36 to 42 hours, implying that the watch functions for the entire duration on a full mainspring wind.</p>
+      <h3>7. Are mechanical watches reliable as compared to quartz watches?</h3>
+      <p>Since battery-powered quartz watches are more accurate, they barely lose about 4 seconds a month, whereas even fully wound mechanical watches may end up losing 5-10 seconds every day. When it comes to time-keeping accuracy, quartz watches are more reliable.</p>
+      <h3>8. Do mechanical watches run on batteries?</h3>
+      <p>No, mechanical watches do not run on batteries. Their functioning depends on hand-winding.</p>
+      <h3>9. How do I make my mechanical watch function more accurately?</h3>
+      <p>If you vertically put your watch on the case size, it will help you slow down your watch. To regulate your watch's accuracy, keep it in the correct direction.</p>
+      <h3>10. Why are mechanical watches so expensive?</h3>
+      <p>Mechanical watches are expensive because of their luxury and craftsmanship value.</p>
+      </div>
+
+
+    <!-- Site footer -->
+    <footer class="site-footer mt-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h6>About</h6>
+              <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </div>
+  
+            <div class="col-xs-6 col-md-3 col-sm-6">
+              <h6>Categories</h6>
+              <ul class="footer-links">
+                <li><a href="http://scanfcode.com/category/c-language/">MECHANICAL</a></li>
+                <li><a href="http://scanfcode.com/category/front-end-development/">AUTOMATIC</a></li>
+                <li><a href="http://scanfcode.com/category/back-end-development/">QUARTZ</a></li>
+                <li><a href="http://scanfcode.com/category/java-programming-language/">CRONOGRAPH</a></li>
+                <li><a href="http://scanfcode.com/category/android/">SMART</a></li>
+                <li><a href="http://scanfcode.com/category/templates/">DIGITAL</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-xs-6 col-md-3 col-sm-6">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+                <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by 
+                AKWATCH.
+              </p>
+            </div>
+  
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a class="instagram" href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>   
+              </ul>
+            </div>
+          </div>
+        </div>
+  </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+  </html>   
