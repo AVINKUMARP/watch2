@@ -2,7 +2,6 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.http import  HttpResponse
 from django.shortcuts import render,redirect
-from django.shortcuts import get_object_or_404
 from .models import Watch
 from .models import Userlog
 from django.contrib.auth import authenticate,login,logout
@@ -12,6 +11,8 @@ from django.contrib.auth.decorators import login_required
 
 
 def index(request):
+    if request.user.is_authenticated:
+        return render(request,'index.html')
     content=Watch.objects.all()
     data={
         'result':content
@@ -38,7 +39,7 @@ def signup(request):
             password1=request.POST.get('pass')
             password2=request.POST.get('cpass')
             if password1==password2:
-                if User.objects.filter(username=username,       email=email).exists():
+                if User.objects.filter(username=username,email=email).exists():
                     messages.info(request,'username already exists!!!!')
                     print("already have")
                 else:

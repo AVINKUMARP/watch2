@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 class Watch(models.Model):
     name=models.CharField(max_length=250)
@@ -20,3 +21,4 @@ class Userlog(models.Model):
 
     class Meta:
         order_with_respect_to = 'user'
+

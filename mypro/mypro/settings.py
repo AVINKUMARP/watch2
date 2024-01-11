@@ -28,6 +28,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_URL = 'user_login'
+LOGIN_REDIRECT_URL='index'
+LOGIN_REDIRECT_URL='user_login'
+LOGIN_URL = 'user_logout'
 
 # Application definition
 
@@ -38,7 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app'
+    'app',
+
+
 ]
 
 MIDDLEWARE = [
