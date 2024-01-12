@@ -154,7 +154,9 @@ button:hover{
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form>
+    <form method="post">
+      {% csrf_token %}
+
         <h3>Signup</h3>
 
         <label for="username">Username</label>

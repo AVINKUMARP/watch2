@@ -81,7 +81,7 @@
                     <h5 class="card-title text-truncate" id="name" name="name">{{i.name}}</h5>
                     <p class="card-text" name="price">{{i.price}}$</p>
                     <div class=" text-center">
-                    <a href="#" class="btn btn butt px-5">Details</a>
+                    <a href="{% url 'details' i.pk %}" class="btn btn butt px-5">Details</a>
                     </div>
                     <a href=""></a>
                   </div>

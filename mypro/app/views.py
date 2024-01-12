@@ -11,8 +11,6 @@ from django.contrib.auth.decorators import login_required
 
 
 def index(request):
-    if request.user.is_authenticated:
-        return render(request,'index.html')
     content=Watch.objects.all()
     data={
         'result':content
@@ -24,9 +22,13 @@ def index(request):
 #     if request.user.is_authenticated:
 #         return render(request,'index.html')
 
-def details(request,watch_id):
-    watch=Watch.objects.get(id=watch_id)
-    return render(request,'details.html',{'watch':watch})
+def details(request,id):
+    product=Watch.objects.get(pk=id)
+    print(product)
+    data={
+        'data':product
+    }
+    return render(request,'details.html',data)
 
 # USER AUTHENTICATION PART
 def signup(request):

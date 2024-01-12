@@ -19,4 +19,5 @@ urlpatterns = [
     path('qur/', views.qur, name="qur"),
     path('cro/', views.cro, name="cro"),
     path('about/', views.about, name="about"),
+    path('details/<int:id>/', views.details, name="details"),
 ]
