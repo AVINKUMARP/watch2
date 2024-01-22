@@ -25,3 +25,11 @@ class Userlog(models.Model):
     class Meta:
         order_with_respect_to = 'user'
 
+class CartItem(models.Model):
+    product = models.ForeignKey(Watch, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField(default=0)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    date_added = models.DateTimeField(auto_now_add=True)
+ 
+    def _str_(self):
+        return f'{self.quantity} x {self.product.name}'
