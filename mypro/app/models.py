@@ -14,20 +14,9 @@ class Watch(models.Model):
     def __str__(self):
         return self.name
 # Create your models here.
-
-class Userlog(models.Model):
-    user = models.ForeignKey(
-        User, on_delete=models.CASCADE, null=True, blank=True)
-    
-    def __str__(self):
-        return self.title
-
-    class Meta:
-        order_with_respect_to = 'user'
-
 class CartItem(models.Model):
     product = models.ForeignKey(Watch, on_delete=models.CASCADE)
-    quantity = models.PositiveIntegerField(default=0)
+    quantity = models.PositiveIntegerField(default=1)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     date_added = models.DateTimeField(auto_now_add=True)
  
