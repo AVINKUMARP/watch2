@@ -13,12 +13,3 @@ class Watch(models.Model):
     
     def __str__(self):
         return self.name
-# Create your models here.
-class CartItem(models.Model):
-    product = models.ForeignKey(Watch, on_delete=models.CASCADE)
-    quantity = models.PositiveIntegerField(default=1)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    date_added = models.DateTimeField(auto_now_add=True)
- 
-    def _str_(self):
-        return f'{self.quantity} x {self.product.name}'
